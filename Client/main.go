@@ -148,7 +148,7 @@ func main() {
 		var err error
 		println("Connecting to WebSocket server...")
 		//socket, _, err = websocket.Dial(ctx, "ws://localhost:8080/ws", nil)
-		socket, _, err = websocket.Dial(ctx, "wss://echo.websocket.org", nil)
+		socket, _, err = websocket.Dial(ctx, "wss://yhnwc6-8080.csb.app/", nil)
 		if err != nil {
 			println("WebSocket establishment failed, error:", err.Error())
 			return
