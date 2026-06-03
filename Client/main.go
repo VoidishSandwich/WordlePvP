@@ -126,7 +126,7 @@ func main() {
 	title.Alignment = fyne.TextAlignCenter
 
 	var createLobbyBtn = NewCustomButton("Create Lobby", 150, 35, func() {
-		SignalServer("Hi", nil)
+		SignalServer("Oi", nil)
 	})
 
 	var joinLobbyBtn = NewCustomButton("Join Lobby", 150, 35, func() {
