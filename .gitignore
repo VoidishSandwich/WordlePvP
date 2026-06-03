@@ -1,0 +1,12 @@
+# Binaries and compiled assets
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+server
+Client/wasm/
+
+# IDE files
+.vscode/
+.idea/
