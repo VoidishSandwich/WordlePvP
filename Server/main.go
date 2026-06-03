@@ -32,7 +32,7 @@ func InitSocketListening(socket *websocket.Conn) {
 			break
 		}
 
-		socket.WriteJSON(map[string]any{"Hi": "yo"})
+		socket.WriteJSON(map[string]any{"Mf": "yo"})
 	}
 }
 
