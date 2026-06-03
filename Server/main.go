@@ -3,7 +3,6 @@ package main
 import (
 	output "fmt"
 	"net/http"
-	"os"
 
 	"github.com/gorilla/websocket"
 )
@@ -37,10 +36,7 @@ func InitSocketListening(socket *websocket.Conn) {
 }
 
 func main() {
-	var port = os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-	}
+	var port = "8080"
 
 	http.HandleFunc("/wss", func(w http.ResponseWriter, r *http.Request) {
 		var socket, err = upgrader.Upgrade(w, r, nil)
