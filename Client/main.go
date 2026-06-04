@@ -142,12 +142,16 @@ func main() {
 			joinLobbyBtn,
 		)),
 	)
-	mainWindow.SetContent(container.NewCenter(trueLayout))
+	var mainLayout = container.NewCenter(trueLayout)
+
+	var notice = canvas.NewText("Note: Request desktop site for better experience!", color.White)
+	notice.Hidden = wordleApp.Driver().Device().IsMobile()
+
+	mainWindow.SetContent(container.NewVBox(mainLayout, notice))
 
 	go func() {
 		var err error
 		println("Connecting to WebSocket server...")
-		//socket, _, err = websocket.Dial(ctx, "ws://localhost:8080/ws", nil)
 		socket, _, err = websocket.Dial(ctx, "wss://yhnwc6-8080.csb.app/wss", nil)
 		if err != nil {
 			println("WebSocket establishment failed, error:", err.Error())
